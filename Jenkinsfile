@@ -25,18 +25,3 @@ tools{
     }
 }
     
-  /* stage('Push Image'){
-        withCredentials([string(credentialsId: 'DOCKER-CREDENTIALS', variable: 'DOCKER_CREDENTIALS')]) {
-            sh 'docker login -u ashokit -p ${DOCKER_CREDENTIALS}'
-        }
-        sh 'docker push ashokit/mavenwebapp'
-    }
-    
-    stage('Deploy App'){
-        kubernetesDeploy(
-            configs: 'maven-web-app-deploy.yml',
-            kubeconfigId: 'Kube-Config'
-        )
-    }    
-}
-/*
